@@ -1,3 +1,76 @@
+.terms-counter {
+	font-weight: 400;
+	font-size: 20px;
+}
+.post-filters__terms {
+	display: flex;
+	margin-bottom: 32px;
+	.post-filters__term {
+		width: fit-content;
+		display: flex;
+		margin-right: 8px;
+		input {
+			display: none;
+			z-index: 91;
+		}
+		label {
+			background-image: url(../icons/square.svg);
+			background-size: 18px;
+			background-position: center left;
+			background-repeat: no-repeat;
+			padding-left: 24px;
+			cursor: pointer;
+		}
+		input:checked + label {
+			background-image: url(../icons/check-square.svg);
+		}
+	}
+	.clear-filters {
+		margin-left: auto;
+		color: red;
+		font-weight: 700;
+		font-size: 16px;
+		cursor: pointer;
+	}
+}
+
+#search-form-filter {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid;
+	&::before {
+		content: "";
+		background-image: url(../icons/search.svg);
+		background-size: contain;
+		width: 2.4rem;
+		height: 2rem;
+		@include bg-c;
+
+	}
+	input {
+		border: none;
+		margin-left: 1.2rem;
+		background-size: 2rem;
+		font-size: 20px;
+		padding: 1.2rem;
+		outline: none;
+		width: calc(100% - 6rem);
+		@include mob-only {
+			font-size: 16px;
+			padding: 1rem 1.2rem
+		}
+	}
+	.remove-search {
+		padding-inline: 1.2rem;
+		width: 4.8rem;
+		cursor: pointer;
+		box-sizing: border-box;
+	}
+}
+
+
+
+// Loader
 
 .loader-wrapper {
     display: none;

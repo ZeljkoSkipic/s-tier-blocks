@@ -22,7 +22,7 @@ if ($params) {
 
 ?>
 
-<div id="filters" class="post-filters">
+<div id="filters" class="post-filters container space_0_3">
 	<div class="post-filters__top">
 		<div class="post-filters__taxonomies">
 
@@ -36,7 +36,7 @@ if ($params) {
 					<?php if (isset($terms[array_key_first($terms)]['title']) && $terms[array_key_first($terms)]['title']) :
 					?>
 
-						<div data-taxonomy-name="<?php echo $taxonomy_name; ?>" class="search-tax-title"><?php echo $terms[array_key_first($terms)]['title']; ?> <?php if($selected_terms_counter): ?> <span class="terms-counter"><?php echo $selected_terms_counter ?></span> <?php endif; ?></div>
+						<h2 data-taxonomy-name="<?php echo $taxonomy_name; ?>" class="search-tax-title">Filter <?php echo $terms[array_key_first($terms)]['title']; ?> <?php if($selected_terms_counter): ?> <span class="terms-counter"><?php echo $selected_terms_counter ?></span> <?php endif; ?></h2>
 
 					<?php endif; ?>
 
